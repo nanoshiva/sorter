@@ -1,26 +1,28 @@
 #This script written by Mr.N.Shivakumar AP/Mech from Mechanical enginnering PMU
 #\Create mp3 directory in the current pendrive
 
-mkdir mp3 .
+mkdir audio .
+mkdir $(date +"%Y-%m-%d") ./audio/
 
-find . -iname "*.mp3" -exec mv {} ./mp3 \;
-find . -iname "*.aac" -exec mv {} ./mp3 \;
-find . -iname "*.adt" -exec mv {} ./mp3 \;
-find . -iname "*.adts" -exec mv {} ./mp3 \;
-find . -iname "*.accb" -exec mv {} ./mp3 \;
-find . -iname "*.aif" -exec mv {} ./mp3 \;
-find . -iname "*.aifc" -exec mv {} ./mp3 \;
-find . -iname "*.aiff" -exec mv {} ./mp3 \;
-find . -iname "*.amr" -exec mv {} ./mp3 \;
-find . -iname "*.m4a" -exec mv {} ./mp3 \;
-find . -iname "*.mov" -exec mv {} ./mp3 \;
-find . -iname "*.wma" -exec mv {} ./mp3 \;
-find . -iname "*.wave" -exec mv {} ./mp3 \;
-find . -iname "*.flac" -exec mv {} ./mp3 \;
+find . -iname "*.mp3" -exec mv {} ./audio/*/ \;
+find . -iname "*.aac" -exec mv {} ./audio/*/ \;
+find . -iname "*.adt" -exec mv {} ./audio/*/ \;
+find . -iname "*.adts" -exec mv {} ./audio/*/ \;
+find . -iname "*.accb" -exec mv {} ./audio/*/ \;
+find . -iname "*.aif" -exec mv {} ./audio/*/ \;
+find . -iname "*.aifc" -exec mv {} ./audio/*/ \;
+find . -iname "*.aiff" -exec mv {} ./audio/*/ \;
+find . -iname "*.amr" -exec mv {} ./audio/*/ \;
+find . -iname "*.m4a" -exec mv {} ./audio/*/ \;
+find . -iname "*.mov" -exec mv {} ./audio/*/ \;
+find . -iname "*.wma" -exec mv {} ./audio/*/ \;
+find . -iname "*.wave" -exec mv {} ./audio/*/ \;
+find . -iname "*.flac" -exec mv {} ./audio/*/ \;
 
 #Create mp4 directory in pwd
-mkdir mp4 .
-find . -iname "*.mp4" -exec mv {} ./mp4 \;
+mkdir video .
+mkdir $(date +"%Y-%m-%d") ./video/
+find . -iname "*.mp4" -exec mv {} ./video/$(date +"%Y-%m-%d")/ \;
 find . -iname "*.avi" -exec mv {} ./mp4 \;
 find . -iname "*.3gp" -exec mv {} ./mp4 \;
 find . -iname "*.mkv" -exec mv {} ./mp4 \;
@@ -30,6 +32,7 @@ find . -iname "*.swf" -exec mv {} ./mp3 \;
 
 #Create executable
 mkdir exe .
+mkdir $(date +"%Y-%m-%d") ./exe/
 find . -iname "*.exe" -exec mv {} ./exe \;
 
 
